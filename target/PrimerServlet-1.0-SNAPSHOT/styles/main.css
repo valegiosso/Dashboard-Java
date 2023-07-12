@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+:root{
+    --hue: 207;
+    --sat: 90%;
+    --lig: 61%;
+
+    --first-color: hsl(var(--hue), var(--sat), var(--lig));
+    --first-color-alt: hsl(var(--hue), var(--sat), 57%);
+    --title-color: hsl(var(--hue), 12%, 15%);
+    --text-color: hsl(var(--hue), 12%, 45%);
+    --text-color-light: hsl(var(--hue), 8%, 75%);
+    --text-color-lighten: hsl(var(--hue), 8%, 92%);
+    --body-color: hsl(var(--hue), 100%, 99%);
+    --container-color: #fff;
+    --theme-color: hsl(var(--hue), var(--sat), var(--lig));
+    --text-color-ig: rgb(38, 38, 38);
+    --border-color: rgb(219, 219, 219);
+    --box-shadow-card: rgba(100, 100, 111, 0.2);
+    --like-hover-color: rgba(0, 0, 0, 0.500);
+
+    --body-font: 'Poppins', sans-serif;
+    /*--body-font: "DM Sans", sans-serif;*/
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+}
+h1{
+    font-size: 24px;
+    font-weight: 700;
+}
+h3{
+    font-size: var(--h3-font-size);
+    font-weight: 700;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: rgb(221, 228, 234);
+    color: var(--text-color);
+    transition: .3s;
+    line-height: normal;
+}
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+  }
+ul{
+    padding: 0;
+    margin: 0;
+}
+
+nav{
+    width: 19%;
+    height: 100%;
+    position: fixed;
+    font-family: var(--body-font);
+    font-size: 16px;
+    color: var(--text-color);
+    transition: .3s;
+    border-right: solid 1px var(--border-color);
+    z-index: 1;
+    background-color: #fff;
+}
+.navbar-container{
+    width: 100%;
+    height: 50%;
+    padding: 8px 12px 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.navbar-container .nav-title{
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-container ul li {
+    margin: 6px 0;
+    display: flex;
+    align-items: center;
+}
+.navbar-container ul .nav_button-active {
+    width: 100%;
+    height: 100%;
+    padding: 12px;
+    color: var(--container-color);
+    background-color: var(--first-color);
+    border-radius: 5px;
+    
+}
+.navbar-container ul li .nav_button {
+    width: 100%;
+    height: 100%;
+    padding: 12px;
+    color: #5a5a5a;
+}
+
+.navbar-container ul li i{
+    padding-right: 16px;
+    font-size: 24px;
+}
+
+main{
+    margin-left: 20%;
+    margin-bottom: 5%;
+}
+
+footer{
+    margin-left: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
