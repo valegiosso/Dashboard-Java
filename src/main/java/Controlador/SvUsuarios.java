@@ -3,16 +3,12 @@ package Controlador;
 
 import Config.Conexion;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import Modelo.Usuario;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -26,16 +22,7 @@ public class SvUsuarios extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        /*List<Usuario> listaUsuarios = new ArrayList();
-        listaUsuarios.add(new Usuario("456132","Luis","Giosso","546562"));
-        listaUsuarios.add(new Usuario("1325432","Osvaldo","Giosso","3357542"));
-        listaUsuarios.add(new Usuario("35461","Raul","Medina","645343"));
-        listaUsuarios.add(new Usuario("635373","Humberto","Giosso","782728"));
-        
-        HttpSession miSesion = request.getSession();
-        miSesion.setAttribute("listaUsuarios", listaUsuarios);
-        response.sendRedirect("mostrarUsuarios.jsp");*/
-        
+         
         String acceso = "";
         String accion = request.getParameter("accion");
         
@@ -78,13 +65,11 @@ public class SvUsuarios extends HttpServlet {
 
             statement.executeUpdate();
 
-            // Redireccionar a una página de éxito o mostrar un mensaje de éxito
+            // Redireccionar a una páginao
             response.sendRedirect("/PrimerServlet");
 
         } catch (SQLException e) {
-            // Manejo de errores
-            e.printStackTrace();
-            // Redireccionar a una página de error o mostrar un mensaje de error
+            System.out.println("Eror en doPost: " + e);
             response.sendRedirect("/PrimerServlet");
         }
     }
