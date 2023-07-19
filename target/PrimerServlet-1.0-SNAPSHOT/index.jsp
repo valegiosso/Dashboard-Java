@@ -27,8 +27,14 @@
             </ul>
         </div>
     </nav>
-    <main></main>
-    <footer></footer>
+    <main>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nostrum reprehenderit distinctio mollitia numquam laudantium iure voluptatibus. Rem, quas expedita. In magni optio corporis iusto deserunt harum voluptatum maiores nemo!
+        </div>
+    </main>
+     <footer>
+        <span class="footer__copy">© Valentin Giosso. All rigths reserved</span>
+    </footer>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
 </body>
 </html>
