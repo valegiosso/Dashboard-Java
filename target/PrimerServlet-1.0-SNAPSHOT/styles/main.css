@@ -124,3 +124,7 @@ footer{
     align-items: center;
     justify-content: center;
 }
+
+.btn-success{
+    margin: 10px;
+}
