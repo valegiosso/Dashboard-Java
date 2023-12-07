@@ -41,7 +41,7 @@
 }
 .users-container .table-container .table-bordered tbody tr .actions{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 .users-container .table-container .table-bordered tbody tr td a{
     height: 24px;
@@ -54,4 +54,10 @@
 }
 .users-container .table-container .table-bordered tbody tr:hover{
     background-color: #cacaca;
+}
+
+
+.text-center input{
+    border: none;
+    
 }
