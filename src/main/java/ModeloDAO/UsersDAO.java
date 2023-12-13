@@ -45,4 +45,35 @@ public class UsersDAO {
         
         return listaUsuarios;
     }
-}
+    
+    public void eliminarUsuario(int idUsuario) throws SQLException {
+        String query = "DELETE FROM users WHERE id = ?";
+        try{
+            conex = conexion.getConnect();
+            PreparedStatement pstm = conex.prepareStatement(query);
+            pstm.setInt(1, idUsuario);
+            pstm.executeUpdate();
+        }catch (SQLException e){
+            System.out.println("Error en UsersDAO:" + e.toString());
+        }
+    }
+
+    public void actualizarUsuario(int idUsuario, String nombre, String apellido, String dni, String contacto) throws SQLException {
+        String sql = "UPDATE users SET Nombre = ?, Apellido = ?, DNI = ?, contacto = ?  WHERE id = ?";
+        try{
+            conex = conexion.getConnect();
+            PreparedStatement statement = conex.prepareStatement(sql);
+            statement.setString(1, nombre);
+            // Establecer otros parámetros para los campos adicionales que estás actualizando
+            statement.setString(2, apellido);
+            statement.setString(3, dni);
+            statement.setString(4, contacto);
+            
+            statement.setInt(5, idUsuario);
+            
+            statement.executeUpdate();
+        }catch (SQLException e){
+            System.out.println("Error en UsersDAO:" + e.toString());
+        }
+    }
+    }
