@@ -2,6 +2,7 @@
 package Controlador;
 
 import Config.Conexion;
+import ModeloDAO.UsersDAO;
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -65,14 +66,30 @@ public class SvUsuarios extends HttpServlet {
 
             statement.executeUpdate();
 
-            // Redireccionar a una páginao
+            // Redireccionar a una página
             response.sendRedirect("/PrimerServlet");
 
         } catch (SQLException e) {
             System.out.println("Eror en doPost: " + e);
             response.sendRedirect("/PrimerServlet");
         }
+        
+        //eliminar usuarios
+        int idUsuario = Integer.parseInt(request.getParameter("idUsuario"));
+        UsersDAO usuarioDAO = new UsersDAO();
+        try {
+            usuarioDAO.eliminarUsuario(idUsuario);
+            
+        } catch (SQLException e) {
+            e.printStackTrace(); // Manejo de errores: puedes redirigir a una página de error o mostrar un mensaje en la misma página
+        }
+        
+        //actualizar usuario
+        int idUser = Integer.parseInt(request.getParameter("idUser"));
+        
+        
     }
+    
 
     @Override
     public String getServletInfo() {
