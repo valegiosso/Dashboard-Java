@@ -78,8 +78,17 @@
                                 <td><%= u.getDni() %></td>
                                 <td><%= u.getContacto() %></td>
                                 <td class="actions">
-                                    <a class="btn btn-success" href="">Update</a>
-                                    <a class="btn btn-danger" href="">Delete</a>
+                                    
+                                    <form action="SvUpdateUser" method="POST">
+                                        <input type="hidden" name="idUsuario" value="<%= u.getId() %>">
+                                        <button type="submit" class="btn btn-success">Update</button>
+                                    </form>
+                                    
+                                    <form action="SvUsuarios" method="POST">
+                                        <input type="hidden" name="idUsuario" value="<%= u.getId() %>">
+                                        <button type="submit" class="btn btn-danger" href="SvUsuarios?accion=eliminar">Delete</button>
+                                    </form>
+                                    
                                 </td>
                             </tr>
                             <% } %>
