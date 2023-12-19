@@ -3,4 +3,6 @@ com\mycompany\primerservlet\resources\JakartaEE8Resource.class
 Controlador\SvUsuarios.class
 Modelo\Usuario.class
 Config\Conexion.class
+Controlador\SvSaveUser.class
+Controlador\SvUpdateUser.class
 ModeloDAO\UsersDAO.class
