@@ -82,7 +82,7 @@ nav{
     flex-direction: column;
 }
 .navbar-container .nav-title{
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     display: flex;
     justify-content: center;
 }
@@ -91,6 +91,9 @@ nav{
     margin: 6px 0;
     display: flex;
     align-items: center;
+}
+.navbar-container ul li h3{
+    padding-left: 12px
 }
 .navbar-container ul .nav_button-active {
     width: 100%;
